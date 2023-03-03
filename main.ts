@@ -7,7 +7,6 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     conteggioInfrarosso = 0
 })
-let infrarosso = 0
 let prossimita = 0
 let valore = 0
 let conteggioInfrarosso = 0
@@ -18,7 +17,7 @@ serial.redirectToUSB()
 basic.forever(function () {
     valore = pins.digitalReadPin(DigitalPin.P0)
     prossimita = pins.digitalReadPin(DigitalPin.P1)
-    infrarosso = pins.digitalReadPin(DigitalPin.P2)
+    statoInfrarosso = pins.digitalReadPin(DigitalPin.P2)
     serial.writeValue("x", valore)
     serial.writeValue("y", prossimita)
     serial.writeValue("z", statoInfrarosso)
