@@ -24,6 +24,7 @@ basic.forever(function () {
     if (statoInfrarosso == 0 && statoPrecedenteInfrarosso == 1) {
         conteggioInfrarosso += 1
         statoPrecedenteInfrarosso = 0
+        music.playTone(330, music.beat(BeatFraction.Double))
     }
     if (statoInfrarosso == 1 && statoPrecedenteInfrarosso == 0) {
         statoPrecedenteInfrarosso = 1
